@@ -1,1 +1,53 @@
 <app-top-header></app-top-header>
+
+<header>
+  <div class="container">
+    <div class="header-menu">
+      <div class="header-menu_logo">
+        <img
+          src="../../../../assets/images/Group 46.png"
+          alt="logo"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="header-menu_nav">
+        <nav>
+          <ul>
+            <li>{{ "home" | translate }}</li>
+            <li>{{ "myCourses" | translate }}</li>
+            <li>{{ "categories" | translate }}</li>
+            <li>{{ "SuccessBoard" | translate }}</li>
+            <li>{{ "TopScore" | translate }}</li>
+            <li>{{ "ContactUs" | translate }}</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-menu_lang">
+        <p (click)="toggleMenuFN()">EN <i class="bi bi-chevron-down"></i></p>
+        <div class="drop-down" *ngIf="toggleMenu">
+          <div class="lang">
+            <div>AR</div>
+            <div>DA</div>
+            <div>CD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-text">
+      <h4>For a better future</h4>
+      <h3>
+        make the most of your <br />curiosity to learn about <br />
+        the world
+      </h3>
+      <p>
+        do you have appetite for knowledge ? are you looking <br />
+        are you looking for an exeptional education ? <br />
+        edumall might be the place for you
+      </p>
+      <button>View Courses</button>
+    </div>
+  </div>
+</header>

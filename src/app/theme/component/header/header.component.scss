@@ -1,0 +1,117 @@
+@import '../../../theme/scss/_variables';
+
+header {
+  background: url('../../../../assets/images/header-bg.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 85vh;
+
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 15px 0;
+    border-bottom: 1px solid #fff;
+
+    .header-menu_nav {
+      nav {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          gap: 0 30px;
+
+          li {
+            color: #fff;
+            color: #FFF;
+            font-family: $font-muli;
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .header-menu_lang {
+      p {
+        color: #FFF;
+        font-family: $font-muli;
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        top: 5px;
+      }
+
+      .drop-down {
+        width: 150px;
+        height: 100px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute;
+        top: 131px;
+        right: 37px;
+        // display: none;
+
+        .lang {
+          display: flex;
+          justify-content: center;
+          gap: 0 10px;
+        }
+      }
+    }
+  }
+
+  .header-text {
+    margin-top: 100px;
+    color: #fff;
+
+    h4 {
+      font-family: $font-muli;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &:before {
+        content: "";
+        background-color: #D7766F;
+        width: 4px;
+        height: 36px;
+        display: inline-block;
+        margin-right: 3px;
+        position: relative;
+        top: 7px;
+      }
+
+    }
+
+    h3 {
+      font-family: $font-muli;
+      font-size: 40px;
+      text-transform: capitalize;
+      font-weight: 900;
+      margin: 25px 0;
+    }
+
+    p {
+      font-family: $font-muli;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+
+    button {
+      all: unset;
+      background-color: $second-color;
+      padding: 10px 25px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+  }
+}

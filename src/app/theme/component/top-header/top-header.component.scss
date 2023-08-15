@@ -2,11 +2,16 @@
 
 .top-header {
   background-color: $primary-color;
-  padding: 15px 0;
+  text-align: right;
 
   .top-header_container {
     display: flex;
-    gap: 0 20px;
+    align-items: center;
+    gap: 10px 20px;
+    justify-content: flex-end;
+    @media(max-width: 767px) {
+      justify-content: center;
+    }
 
     ul {
       list-style: none;
@@ -15,12 +20,29 @@
       display: flex;
       gap: 0 25px;
 
-      .social-media {
+      &.social-media {
         li {
           color: #ACACAE;
 
           i {
             font-size: 20px;
+            color: #ACACAE;
+          }
+        }
+      }
+
+      &.user-profile {
+        li {
+          color: #fff;
+          font-family: $font-muli;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 12px 20px;
+
+          &.logout {
+            background-color: $btn-color;
+            padding: 12px 20px;
+            font-weight: 600;
           }
         }
       }

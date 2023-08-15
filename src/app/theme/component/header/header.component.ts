@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  toggleMenu: boolean = false;
+
+  toggleMenuFN() {
+    this.toggleMenu = !this.toggleMenu
+  }
+
 }
