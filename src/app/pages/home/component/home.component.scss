@@ -1,0 +1,151 @@
+@import '../../../theme/scss/_variables';
+@import '../../../theme/scss/button';
+@import '../../../theme/scss/base';
+
+.services {
+  background-color: $primary-color;
+  padding: 50px 0;
+  text-align: center;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: #FFF;
+    font-family: $font-muli;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #FFF;
+    font-family: $font-muli;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    width: 80%;
+    margin: auto;
+
+    @media(max-width: 767px) {
+      width: 100%;
+    }
+
+  }
+
+}
+
+.about-us {
+  padding: 50px 0;
+  .about-page-img {
+    position: relative;
+    width: 100%;
+    img {
+      width: 90%;
+      height: auto;
+
+      @media(max-width: 767px) {
+        width: 100%;
+        margin: auto;
+      }
+    }
+    .red-circle {
+      background-color: $second-color;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 54%;
+      right: 25%;
+    }
+    .blue-circle {
+      background-color: #97B6D2;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 72%;
+      left: 23%;
+    }
+
+    .trust-circle {
+      background-color: #fff;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 13%;
+      left: 23%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      align-content: center;
+
+      h3 {
+        color: #ACACAE;
+        font-family: $font-muli;
+        font-size: 16px;
+        font-weight: 800;
+        text-align: center;
+      }
+      p {
+        color: #D7766F;
+        font-family: $font-muli;
+        font-size: 33px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  }
+
+  .about-us-info {
+    margin-top: 200px;
+
+    @media(max-width: 767px) {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    h4 {
+      color: #D7766F;
+      font-family: $font-muli;
+      font-size: 22px;
+      font-weight: 700;
+
+      &::before {
+        @include BeforeTitle
+      }
+    }
+
+    h3 {
+      color: #062F87;
+      font-family: $font-muli;
+      font-size: 45px;
+      font-weight: 700;
+      margin: 25px 0;
+    }
+
+    p {
+      color: #707070;
+      font-family: $font-muli;
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+  }
+
+  .about-us-btn {
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+    margin: 40px 0;
+
+    button {
+      @include generalBtn(#97B6D2);
+    }
+  }
+}

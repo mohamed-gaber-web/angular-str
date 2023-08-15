@@ -1,0 +1,11 @@
+@mixin generalBtn($bg-color) {
+  all: unset;
+  background-color: $bg-color;
+  padding: 12px 30px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  cursor: pointer;
+}

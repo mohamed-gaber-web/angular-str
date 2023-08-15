@@ -1,4 +1,5 @@
 @import '../../../theme/scss/_variables';
+@import '../../../theme/scss/_base';
 
 header {
   background: url('../../../../assets/images/header-bg.png') no-repeat center center;
@@ -36,6 +37,8 @@ header {
     }
 
     .header-menu_lang {
+        position: relative;
+
       p {
         color: #FFF;
         font-family: $font-muli;
@@ -43,6 +46,7 @@ header {
         font-weight: 700;
         position: relative;
         top: 5px;
+        cursor: pointer;
       }
 
       .drop-down {
@@ -52,8 +56,8 @@ header {
         padding: 10px;
         border-radius: 5px;
         position: absolute;
-        top: 131px;
-        right: 37px;
+        top: 60px;
+        right: 0;
         // display: none;
 
         .lang {
@@ -76,14 +80,7 @@ header {
       font-weight: 600;
 
       &:before {
-        content: "";
-        background-color: #D7766F;
-        width: 4px;
-        height: 36px;
-        display: inline-block;
-        margin-right: 3px;
-        position: relative;
-        top: 7px;
+        @include  BeforeTitle
       }
 
     }

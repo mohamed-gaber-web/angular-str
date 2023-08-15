@@ -1,0 +1,10 @@
+@mixin BeforeTitle() {
+  content: "";
+  background-color: #D7766F;
+  width: 4px;
+  height: 33px;
+  display: inline-block;
+  margin-right: 3px;
+  position: relative;
+  top: 7px;
+}
