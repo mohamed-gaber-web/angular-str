@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { NgbAccordionModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbDatepickerModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {
   IntersectionObserverHooks,
@@ -17,9 +17,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
+import { CategoryComponent } from './component/category/category.component';
+
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CategoryComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -29,6 +33,7 @@ import { HttpLoaderFactory } from '../app.module';
     SwiperModule,
     NgbAccordionModule,
     HttpClientModule,
+    NgbDatepickerModule,
     LazyLoadImageModule,
     ToastrModule.forRoot(),
     NgbPaginationModule,
@@ -46,7 +51,10 @@ import { HttpLoaderFactory } from '../app.module';
     ToastrModule,
     NgbAccordionModule,
     NgbPaginationModule,
-    TranslateModule
+    TranslateModule,
+    NgbDatepickerModule,
+    CategoryComponent,
+    RouterModule
 
   ],
   providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: IntersectionObserverHooks }], // <-- Declare that you want to use ScrollHooks

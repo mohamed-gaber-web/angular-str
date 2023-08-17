@@ -2,12 +2,8 @@
 @import '../../../theme/scss/_base';
 
 header {
-  background: url('../../../../assets/images/header-bg.png') no-repeat center center;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  height: 85vh;
+  background-color: #fff;
+  padding: 15px 0;
 
   .header-menu {
     display: flex;
@@ -26,11 +22,11 @@ header {
           gap: 0 30px;
 
           li {
-            color: #fff;
-            color: #FFF;
+            color: $primary-color;
             font-family: $font-muli;
             font-size: 16px;
             font-weight: 700;
+            cursor: pointer;
           }
         }
       }
@@ -38,6 +34,15 @@ header {
 
     .header-menu_lang {
         position: relative;
+
+        i {
+          color: $primary-color;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
 
       p {
         color: #FFF;
@@ -50,65 +55,29 @@ header {
       }
 
       .drop-down {
-        width: 150px;
-        height: 100px;
+        width: 180px;
+        height: 150px;
         background-color: #fff;
         padding: 10px;
         border-radius: 5px;
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0;
-        // display: none;
 
         .lang {
           display: flex;
-          justify-content: center;
-          gap: 0 10px;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+          }
         }
       }
     }
   }
 
-  .header-text {
-    margin-top: 100px;
-    color: #fff;
 
-    h4 {
-      font-family: $font-muli;
-      font-size: 25px;
-      text-transform: uppercase;
-      font-weight: 600;
-
-      &:before {
-        @include  BeforeTitle
-      }
-
-    }
-
-    h3 {
-      font-family: $font-muli;
-      font-size: 40px;
-      text-transform: capitalize;
-      font-weight: 900;
-      margin: 25px 0;
-    }
-
-    p {
-      font-family: $font-muli;
-      font-size: 18px;
-      text-transform: capitalize;
-      font-weight: 700;
-    }
-
-    button {
-      all: unset;
-      background-color: $second-color;
-      padding: 10px 25px;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      margin-top: 15px;
-    }
-  }
 }

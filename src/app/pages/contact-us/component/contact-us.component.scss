@@ -1,0 +1,67 @@
+@import '../../../theme/scss/variables';
+@import '../../../theme/scss/button';
+
+.contact-us {
+  margin: 100px 0;
+
+  .contact-us_info {
+    margin-top: 100px;
+
+    @media(max-width: 757px) {
+      margin: 30px 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: $primary-color;
+        font-family: $font-muli;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 40px 0;
+
+        i {
+          font-size: 27px;
+          color: $second-color;
+          margin-right: 20px;
+        }
+
+      }
+    }
+  }
+
+  .contact-us_form {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 50px;
+
+    label {
+      color: $primary-color;
+      font-family: $font-muli;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .form-control {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $second-color;
+      margin: 10px 0;
+      border-radius: 0;
+    }
+
+    .form-btn {
+      text-align: center;
+      margin: 20px 0;
+      button {
+        @include generalBtn($second-color);
+        max-width: 100%;
+        width: 30%;
+      }
+    }
+  }
+}

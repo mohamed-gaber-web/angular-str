@@ -1,13 +1,44 @@
 <div class="home-page">
+  <div class="hero-img">
+    <div class="container">
+      <div class="header-text">
+        <h4>For a better future</h4>
+        <h3>
+          make the most of your <br />curiosity to learn about <br />
+          the world
+        </h3>
+        <p>
+          do you have appetite for knowledge ? are you looking <br />
+          are you looking for an exeptional education ? <br />
+          edumall might be the place for you
+        </p>
+        <button (click)="onClick('allCourses')">View Courses</button>
+        <div class="icon-video" (click)="open(content)">
+          <div class="video">
+            <i class="bi bi-play-fill"></i>
+          </div>
+          <p>How it works</p>
+          <!-- <img src="../../../../assets/images/flags & gif/Group 750.gif" /> -->
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="services">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <img
-            src="../../../../assets/images/serv-img.png"
-            loading="lazy"
-            alt=""
-          />
+          <div class="img-container">
+            <img
+              src="../../../../assets/images/serv-img.png"
+              loading="lazy"
+              alt=""
+            />
+            <div class="img-gif">
+              <img
+                src="../../../../assets/images/https___lottiefiles.com_animations_rocket-qQFDXfKvbZ.gif"
+              />
+            </div>
+          </div>
           <h3>High professional quality</h3>
           <p>
             Key features are the ability to develop relationships with their
@@ -17,11 +48,18 @@
         </div>
 
         <div class="col-md-4">
-          <img
-            src="../../../../assets/images/serv-img.png"
-            loading="lazy"
-            alt=""
-          />
+          <div class="img-container">
+            <img
+              src="../../../../assets/images/serv-img.png"
+              loading="lazy"
+              alt=""
+            />
+            <div class="img-gif">
+              <img
+                src="../../../../assets/images/https___lottiefiles.com_animations_global-blue-tech-remake-Q9GDC9eI9G.gif"
+              />
+            </div>
+          </div>
           <h3>Large selection of courses</h3>
           <p>
             Explore a variety of fresh topics. Find the right instructor for
@@ -30,11 +68,18 @@
         </div>
 
         <div class="col-md-4">
-          <img
-            src="../../../../assets/images/serv-img.png"
-            loading="lazy"
-            alt=""
-          />
+          <div class="img-container">
+            <img
+              src="../../../../assets/images/serv-img.png"
+              loading="lazy"
+              alt=""
+            />
+            <div class="img-gif">
+              <img
+                src="../../../../assets/images/https___lottiefiles.com_animations_number-one-p4no5GxG73.gif"
+              />
+            </div>
+          </div>
           <h3>Best & Most Involved earning</h3>
           <p>
             Key features are the ability to develop relationships with their
@@ -85,4 +130,61 @@
       </div>
     </div>
   </div>
+
+  <div class="categories">
+    <div class="container">
+      <h3 class="title">{{ "ourCategory" | translate }}</h3>
+      <p>
+        Key features are the ability to develop relationships with their
+        students, patient, caring, and<br />
+        kind personality, knowledge of learners. Engaging students in learning.
+      </p>
+      <app-category></app-category>
+    </div>
+  </div>
+
+  <div class="all-courses" id="allCourses">
+    <div class="container">
+      <h3 class="title">All Courses</h3>
+      <div class="row">
+        <div
+          class="col-md-4 col-lg-3 col-sm-6"
+          *ngFor="let item of [1, 2, 3, 4, 5, 6]"
+        >
+          <div class="course">
+            <img src="../../../../assets/images/placeholder.jpg" alt="" />
+            <div class="course-info">
+              <h4>Arbejdsmarked og digitalisering</h4>
+              <h5>Duration: <b> 30 day </b></h5>
+              <p>
+                Du introduceres for det danske arbejdsmarked og lærer at
+                navigere i relevante digitale
+              </p>
+            </div>
+            <div class="course-btn">
+              <button class="more">Know More</button>
+              <button class="apply">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Modal Video -->
+
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <!-- <video controls>
+      <source
+        src="https://www.youtube.com/watch?v=eIi_BHEMyNM"
+        type="video/mp4"
+      />
+    </video> -->
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+    </iframe>
+  </div>
+</ng-template>
+
+<!-- Modal Video -->

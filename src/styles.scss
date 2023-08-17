@@ -5,13 +5,78 @@
 
 @import "bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+@import 'ngx-toastr/toastr';
+
 @import "swiper/scss";
 @import "swiper/scss/navigation";
 @import "swiper/scss/pagination";
-@import 'ngx-toastr/toastr';
-
+@import '~animate.css/animate.min.css';
 @import './app/theme/scss/_variables';
 
 body {
   background-color: $body-color;
+}
+
+h3.title {
+  color: #707070;
+  font-family: $font-muli;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.swiper-button-next {
+    background-color: #97B6D2;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    text-rendering: auto;
+}
+
+.swiper-button-prev {
+    background-color: #97B6D2;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    text-rendering: auto;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 16px;
+}
+
+h3.title-page {
+  color: $second-color;
+  font-family: $font-muli;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+
+@media (min-width: 1400px) {
+.container {
+    max-width: 1600px;
+}
+}
+
+.page-content {
+  background-color: #FBF8F3;
+  border-radius: 20px;
+  padding: 50px;
+  border: 15px solid #fff;
+
+  @media(max-width: 1024px) {
+    padding: 20px;
+  }
 }

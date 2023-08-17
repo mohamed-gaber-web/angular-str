@@ -1,0 +1,25 @@
+@import '../../../theme/scss/variables';
+
+.privacy {
+  margin: 100px 0;
+
+  .privacy-content {
+    img {
+      width: 15%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      @media(max-width: 767px) {
+        width: 100%;
+      }
+    }
+    p {
+      color: #707070;
+      font-family: $font-muli;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+  }
+}
