@@ -15,8 +15,8 @@ export class HeaderComponent {
     '../../../../assets/images/b.png'
   ];
   imgIcon!: string;
-
   toggleMenu: boolean = false;
+  menuToggle: boolean = false;
 
   toggleMenuFN() {
     this.toggleMenu = !this.toggleMenu
@@ -25,8 +25,17 @@ export class HeaderComponent {
   ngOnInit() {
     this.imgIcon = this.langArr[0]
   }
+
   changeIconLang(img: string) {
     this.imgIcon = img;
+  }
+
+  menuToggleFN() {
+    this.menuToggle = !this.menuToggle;
+  }
+
+  closeMenuFN() {
+    this.menuToggle = false;
   }
 
 }

@@ -28,14 +28,14 @@ export class CategoryComponent {
     loop: true,
     navigation: true,
     breakpoints: {
-    480: {
+    320: {
       slidesPerView: 1,
     },
     640: {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     1024: {
       slidesPerView: 4,

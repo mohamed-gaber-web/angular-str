@@ -19,6 +19,9 @@
       margin: 0;
       display: flex;
       gap: 0 25px;
+      @media(max-width: 425px) {
+        gap: 0 13px;
+      }
 
       &.social-media {
         li {
@@ -27,6 +30,9 @@
           i {
             font-size: 20px;
             color: #ACACAE;
+            @media(max-width: 425px) {
+              font-size: 16px;
+            }
           }
         }
       }

@@ -1,0 +1,43 @@
+<div class="home-page">
+  <div class="hero-img"></div>
+
+  <div class="categories">
+    <div class="container">
+      <h3 class="title">{{ "ourOnlineCourses" | translate }}</h3>
+      <p>
+        Key features are the ability to develop relationships with their
+        students, patient, caring, and<br />
+        kind personality, knowledge of learners. Engaging students in learning.
+      </p>
+      <app-category></app-category>
+    </div>
+  </div>
+
+  <div class="all-courses" id="allCourses">
+    <div class="container">
+      <h3 class="title">All Courses</h3>
+      <div class="row">
+        <div
+          class="col-md-6 col-lg-6 col-xl-3 col-sm-12"
+          *ngFor="let item of [1, 2, 3, 4, 5, 6]"
+        >
+          <div class="course">
+            <img src="../../../../assets/images/placeholder.jpg" alt="" />
+            <div class="course-info">
+              <h4>Arbejdsmarked og digitalisering</h4>
+              <h5>Duration: <b> 30 day </b></h5>
+              <p>
+                Du introduceres for det danske arbejdsmarked og lærer at
+                navigere i relevante digitale
+              </p>
+            </div>
+            <div class="course-btn">
+              <button class="more">Know More</button>
+              <button class="apply">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

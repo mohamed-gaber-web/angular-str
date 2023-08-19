@@ -78,7 +78,7 @@
   "link": "link",
   "mediaType": "media type",
   "aboutUs": "About Us",
-  "content": "content",
+  "content": "Content",
   "contentRequired": "content is required",
   "aboutUs-content": "about us content",
   "contactUsInfo": "contact us info",
@@ -133,5 +133,8 @@
   "privacy-policy": "Privacy Policy",
   "ourCategory": "Our Courses By Category",
   "introVideo": "Intro Video ",
-  "send": "Send"
+  "send": "Send",
+  "onlineCourses": "Online Courses",
+  "reviews": "Reviews",
+  "ourOnlineCourses": "Our Online Courses"
 }

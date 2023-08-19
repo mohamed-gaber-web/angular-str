@@ -12,6 +12,10 @@ header {
     padding: 25px 0 15px 0;
     border-bottom: 1px solid #fff;
 
+    .header-menu_logo {
+      cursor: pointer;
+    }
+
     .header-menu_nav {
       nav {
         ul {
@@ -81,3 +85,55 @@ header {
 
 
 }
+
+.menu-icon-mobile {
+  cursor: pointer;
+  i {
+    font-size: 40px;
+    color: #000;
+  }
+}
+
+.header-menu_nav_mobile {
+  width: 80%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 179px;
+  left: 0;
+  z-index: 2000000;
+  transition: all 0.5s ease-in-out;
+
+
+  ul {
+    list-style: none;
+    margin-top: 50px;
+
+    li {
+      font-size: 30px;
+      line-height: 60px;
+      color: $second-color;
+      font-weight: 700;
+    }
+  }
+}
+
+
+
+@media(max-width: 991px) {
+  .header-menu_nav {
+    display: none;
+  }
+}
+
+@media(min-width: 992px) {
+  .menu-icon-mobile {
+    display: none;
+  }
+  .header-menu_nav_mobile {
+    display: none;
+  }
+}
+
+
+

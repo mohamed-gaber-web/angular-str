@@ -7,6 +7,7 @@
           src="../../../../assets/images/Group 46.png"
           alt="logo"
           loading="lazy"
+          routerLink=""
         />
       </div>
 
@@ -15,11 +16,32 @@
           <ul>
             <li routerLink="">{{ "home" | translate }}</li>
             <li>{{ "myCourses" | translate }}</li>
-            <li>{{ "categories" | translate }}</li>
-            <li>{{ "SuccessBoard" | translate }}</li>
-            <li>{{ "TopScore" | translate }}</li>
+            <li routerLink="/online-courses">
+              {{ "onlineCourses" | translate }}
+            </li>
+            <li>{{ "reviews" | translate }}</li>
             <li [routerLink]="['/about-us']">{{ "aboutUs" | translate }}</li>
             <li [routerLink]="['/contact-us']">
+              {{ "ContactUs" | translate }}
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-menu_nav_mobile" *ngIf="menuToggle">
+        <nav>
+          <ul>
+            <li (click)="closeMenuFN()" routerLink="">
+              {{ "home" | translate }}
+            </li>
+            <li (click)="closeMenuFN()">{{ "myCourses" | translate }}</li>
+            <li routerLink="/online-courses" (click)="closeMenuFN()">
+              {{ "onlineCourses" | translate }}
+            </li>
+            <li>{{ "reviews" | translate }}</li>
+            <li (click)="closeMenuFN()" [routerLink]="['/about-us']">
+              {{ "aboutUs" | translate }}
+            </li>
+            <li (click)="closeMenuFN()" [routerLink]="['/contact-us']">
               {{ "ContactUs" | translate }}
             </li>
           </ul>
@@ -38,6 +60,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="menu-icon-mobile" (click)="menuToggleFN()">
+        <i class="bi bi-list"></i>
       </div>
     </div>
   </div>
