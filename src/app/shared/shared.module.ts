@@ -18,11 +18,15 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { CategoryComponent } from './component/category/category.component';
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReviewsCardComponent } from './component/reviews-card/reviews.component';
+
 
 
 @NgModule({
   declarations: [
-    CategoryComponent
+    CategoryComponent,
+    ReviewsCardComponent
   ],
   imports: [
     CommonModule,
@@ -37,6 +41,7 @@ import { CategoryComponent } from './component/category/category.component';
     LazyLoadImageModule,
     ToastrModule.forRoot(),
     NgbPaginationModule,
+    NgbRatingModule,
     TranslateModule.forChild({//or forRoot, no idea how to configure this
       loader: {
         provide: TranslateLoader,
@@ -54,8 +59,9 @@ import { CategoryComponent } from './component/category/category.component';
     TranslateModule,
     NgbDatepickerModule,
     CategoryComponent,
-    RouterModule
-
+    RouterModule,
+    NgbRatingModule,
+    ReviewsCardComponent
   ],
   providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: IntersectionObserverHooks }], // <-- Declare that you want to use ScrollHooks
 })

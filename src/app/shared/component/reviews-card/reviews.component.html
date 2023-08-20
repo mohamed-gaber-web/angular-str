@@ -1,0 +1,35 @@
+<div class="reviews">
+  <div class="container">
+    <swiper [config]="config" class="main-swiper review-slider" effect="fade">
+      <ng-template swiperSlide *ngFor="let item of [1, 2, 3, 4]">
+        <div class="review">
+          <div class="slide-img">
+            <img src="../../../../assets/images/placeholder.jpg" />
+            <h3 class="username">Mabel Mark</h3>
+            <div class="review-rating">
+              <ngb-rating [max]="5" [(rate)]="currentRate" [readonly]="true">
+                <ng-template let-fill="fill">
+                  <span [class.filled]="fill === 0" [ngClass]="'color2'"
+                    >&#9733;</span
+                  >
+                </ng-template>
+              </ngb-rating>
+            </div>
+          </div>
+          <div class="slide-info">
+            <h5>October 22, 2020</h5>
+            <h3>I really enjoyed it</h3>
+            <div class="review-content">
+              <p>
+                I really enjoyed it - great content packed in very good form:
+                videos are short (1-2min per topic) and to the point, so you can
+                easily go back; quizzes let you test your knowledge along the
+                way; nice handouts help to review key items when needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</div>

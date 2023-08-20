@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'online-courses',
     loadChildren: () => import('./pages/online-courses/online-courses.module').then(m => m.OnlineCoursesModule)
+  },
+  {
+    path: 'reviews',
+    loadChildren: () => import('./pages/reviews/reviews.module').then(m => m.ReviewsModule)
   }
 ];
 

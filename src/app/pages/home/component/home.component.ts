@@ -1,7 +1,9 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,8 +13,7 @@ export class HomeComponent {
 
   constructor(private viewportScroller: ViewportScroller, private modalService: NgbModal) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onClick(elementId: any): void {
     this.viewportScroller.scrollToAnchor(elementId);
@@ -22,5 +23,7 @@ export class HomeComponent {
   	open(content: any) {
 		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', centered: true, size: 'xl' })
 	}
+
+
 
 }

@@ -1,0 +1,112 @@
+@import '../../../theme/scss/_variables';
+
+.reviews {
+  margin: 100px 0;
+
+  .review {
+    display: flex;
+    gap: 0 30px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 50px 100px;
+
+    @media(max-width: 1024px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .slide-img {
+      background: radial-gradient(circle, rgba(132,161,188,1) 0%, rgba(57,78,102,1) 100%);
+      text-align: center;
+      padding: 30px 0;
+      border-radius: 30px;
+
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 15px solid #fff;
+      }
+
+      h3.username {
+        color: #FFF;
+        font-family: $font-muli;
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 20px;
+      }
+    .color2 {
+      color: orange !important;
+      font-size: 35px;
+    }
+    }
+
+    .slide-info {
+      padding: 0 40px;
+      @media(max-width: 1024px) {
+        padding: 0;
+      }
+      h5 {
+        color: #707070;
+        font-family: $font-muli;
+        font-size: 20px;
+        font-weight: 400;
+        @media(max-width: 767px) {
+          font-size: 14px;
+          margin-top: 50px;
+        }
+
+        @media(min-width: 768px) and (max-width: 1024px) {
+          margin-top: 50px;
+
+        }
+      }
+      h3 {
+        color: #707070;
+        font-family: $font-muli;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 30px;
+
+        @media(max-width: 767px) {
+          font-size: 22px;
+        }
+      }
+
+      .review-content {
+        position: relative;
+        p{
+          color: #707070;
+          font-family: $font-muli;
+          font-size: 30px;
+          font-weight: 400;
+
+          @media(max-width: 767px) {
+            font-size: 16px;
+          }
+
+        }
+
+          &:before {
+            content: '';
+            background: url('../../../../assets/images/before.svg') no-repeat;
+            width: 100%;
+            height: 50px;
+            display: inline-block;
+          }
+
+          &:after {
+            content: '';
+            background: url('../../../../assets/images/after.svg') no-repeat;
+            width: 15%;
+            height: 50px;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+          }
+      }
+    }
+  }
+}

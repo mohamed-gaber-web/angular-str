@@ -14,14 +14,45 @@
       <div class="header-menu_nav">
         <nav>
           <ul>
-            <li routerLink="">{{ "home" | translate }}</li>
-            <li>{{ "myCourses" | translate }}</li>
-            <li routerLink="/online-courses">
+            <li
+              routerLink=""
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ "home" | translate }}
+            </li>
+            <li
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ "myCourses" | translate }}
+            </li>
+            <li
+              routerLink="/online-courses"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
               {{ "onlineCourses" | translate }}
             </li>
-            <li>{{ "reviews" | translate }}</li>
-            <li [routerLink]="['/about-us']">{{ "aboutUs" | translate }}</li>
-            <li [routerLink]="['/contact-us']">
+            <li
+              routerLinkActive="active"
+              routerLink="/reviews"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ "reviews" | translate }}
+            </li>
+            <li
+              routerLinkActive="active"
+              [routerLink]="['/about-us']"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ "aboutUs" | translate }}
+            </li>
+            <li
+              routerLinkActive="active"
+              [routerLink]="['/contact-us']"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
               {{ "ContactUs" | translate }}
             </li>
           </ul>
@@ -37,7 +68,9 @@
             <li routerLink="/online-courses" (click)="closeMenuFN()">
               {{ "onlineCourses" | translate }}
             </li>
-            <li>{{ "reviews" | translate }}</li>
+            <li routerLink="/reviews" (click)="closeMenuFN()">
+              {{ "reviews" | translate }}
+            </li>
             <li (click)="closeMenuFN()" [routerLink]="['/about-us']">
               {{ "aboutUs" | translate }}
             </li>
@@ -59,6 +92,12 @@
               <img (click)="changeIconLang(item)" [src]="item" />
             </div>
           </div>
+        </div>
+        <div class="user-profile">
+          <img src="../../../../assets/images/user-profile.jpg" />
+        </div>
+        <div class="search">
+          <img src="../../../../assets/images/search.svg" />
         </div>
       </div>
       <div class="menu-icon-mobile" (click)="menuToggleFN()">

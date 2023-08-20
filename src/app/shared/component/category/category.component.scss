@@ -18,16 +18,25 @@
 
     .cat-text {
       background-color: #fff;
-      padding: 30px 20px;
+      padding: 15px 20px;
       height: 150px;
       text-align: center;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: #97B6D2;
+      }
+
+      &:hover h3 {
+        color: #fff;
+      }
 
       h3 {
         color: $second-color;
         font-size: 27px;
         font-weight: 700;
         text-align: center;
-
       }
     }
   }

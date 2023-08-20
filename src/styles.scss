@@ -29,6 +29,28 @@ h3.title {
   }
 }
 
+.review-slider {
+
+  .swiper-button-next {
+    background-color: transparent;
+    color: $primary-color;
+}
+
+.swiper-button-prev {
+    background-color: transparent;
+    color: $primary-color;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 50px;
+
+    @media(max-width: 767px) {
+      font-size: 25px;
+    }
+}
+
+}
+
 .swiper-button-next {
     background-color: #97B6D2;
     width: 45px;
