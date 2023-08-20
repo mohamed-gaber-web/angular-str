@@ -47,6 +47,38 @@ header {
         }
 
         .user-profile {
+          position: relative;
+          cursor: pointer;
+          .drop-down-menu {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 16px;
+            position: absolute;
+            top: 80px;
+            right: -70px;
+            box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+            z-index: 20000;
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $font-muli;
+                text-align: center;
+                line-height: 50px;
+                cursor: pointer;
+                border-bottom: 2px solid #000;
+                &:last-child {
+                  border: none;
+                }
+              }
+            }
+          }
           img {
             width: 40px;
             height: 40px;
@@ -55,6 +87,7 @@ header {
         }
 
         .search {
+          cursor: pointer;
           img {
             width: 30px;
             height: 30px;
@@ -83,13 +116,15 @@ header {
 
       .drop-down {
         width: 180px;
-        height: 150px;
+        height: auto;
         background-color: #fff;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 16px;
         position: absolute;
         top: 80px;
         right: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+        z-index: 200000;
 
         .lang {
           display: flex;
@@ -97,8 +132,8 @@ header {
           gap: 20px;
 
           img {
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             cursor: pointer;
           }
         }

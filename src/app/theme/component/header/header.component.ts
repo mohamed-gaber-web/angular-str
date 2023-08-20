@@ -17,6 +17,7 @@ export class HeaderComponent {
   imgIcon!: string;
   toggleMenu: boolean = false;
   menuToggle: boolean = false;
+  menuToggleProfle: boolean = false;
 
   toggleMenuFN() {
     this.toggleMenu = !this.toggleMenu
@@ -34,8 +35,13 @@ export class HeaderComponent {
     this.menuToggle = !this.menuToggle;
   }
 
+  menuToggleProfileFN() {
+    this.menuToggleProfle = !this.menuToggleProfle;
+  }
+
   closeMenuFN() {
     this.menuToggle = false;
+    this.menuToggleProfle = false
   }
 
 }

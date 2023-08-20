@@ -1,0 +1,118 @@
+@import '../../../theme/scss/variables';
+
+.top-score {
+  margin: 100px 0;
+  background: url('../../../../assets/images/top-score-bg.gif') , url('../../../../assets/images/top-score-bg.gif');
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+
+  .top-score_block {
+    position: relative;
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    border-radius: 16px;
+    width: 100%;
+    margin: 100px auto 20px auto;
+
+    @media(min-width: 1400px) {
+      width: 70%;
+    }
+
+    .img-bg {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      img {
+      width: 175px;
+      height: 175px;
+
+      @media(max-width: 550px) {
+        width: 120px;
+        height: 120px;
+      }
+      }
+    }
+
+    .top-score-block_img {
+      position: absolute;
+      top: -83px;
+      left: 0;
+      right: 0;
+      img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        margin: auto;
+      }
+    }
+
+
+    .top-score-block_info {
+
+      margin-top: 50px;
+
+      h4 {
+        color: #181B24;
+        font-family: $font-muli;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      h3 {
+        color: #181B24;
+        font-family: $font-muli;
+        font-size: 30px;
+        font-weight: 400;
+      }
+
+      p {
+        color: $second-color;
+        font-family: $font-muli;
+        font-size: 35px;
+        font-weight: 700;
+      }
+    }
+
+    h2 {
+      color: $second-color;
+      font-family: $font-muli;
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+  }
+
+  .top-score_block_bottom {
+    img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+    }
+
+      .top-score_block_bottom_info {
+        margin-top: 20px;
+        h4 {
+            color: #181B24;
+            font-family: $font-muli;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
+          }
+
+          p {
+            color: #61C8B0;
+            font-family: $font-muli;
+            font-size: 25px;
+            font-weight: 400;
+            padding: 0;
+          }
+
+    }
+  }
+}

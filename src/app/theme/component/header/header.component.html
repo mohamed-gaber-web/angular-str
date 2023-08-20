@@ -94,9 +94,21 @@
           </div>
         </div>
         <div class="user-profile">
-          <img src="../../../../assets/images/user-profile.jpg" />
+          <img
+            src="../../../../assets/images/user-profile.jpg"
+            (click)="menuToggleProfileFN()"
+          />
+          <div class="drop-down-menu" *ngIf="menuToggleProfle">
+            <ul>
+              <li (click)="closeMenuFN()">{{ "myCourses" | translate }}</li>
+              <li (click)="closeMenuFN()">{{ "profile" | translate }}</li>
+              <li routerLink="/top-score" (click)="closeMenuFN()">
+                {{ "topScore" | translate }}
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="search">
+        <div class="search" routerLink="/search">
           <img src="../../../../assets/images/search.svg" />
         </div>
       </div>
