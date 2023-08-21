@@ -54,15 +54,7 @@
     }
 
     button {
-      @include generalBtn($second-color)
-      // all: unset;
-      // background-color: $second-color;
-      // padding: 10px 25px;
-      // border-radius: 5px;
-      // color: #fff;
-      // font-size: 18px;
-      // font-weight: 600;
-      // margin-top: 15px;
+      @include generalBtn($second-color, $second-color)
     }
 
     .icon-video {
@@ -233,7 +225,7 @@
       font-weight: 700;
 
       &::before {
-        @include BeforeTitle
+        @include BeforeTitle;
       }
     }
 
@@ -264,7 +256,7 @@
     margin: 40px 0;
 
     button {
-      @include generalBtn(#97B6D2);
+      @include generalBtn(#97B6D2, $btn-color);
     }
   }
 }
@@ -346,12 +338,12 @@
       margin: 20px auto;
 
       button.more {
-        @include generalBtn($second-color);
+        @include generalBtn($second-color, $second-color);
         text-align: center;
       }
 
       button.apply {
-        @include generalBtn(#97B6D2);
+        @include generalBtn($btn-color, $btn-color);
         text-align: center
       }
 

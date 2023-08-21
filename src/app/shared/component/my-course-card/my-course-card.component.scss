@@ -63,12 +63,12 @@
       margin: 20px auto;
 
       button.more {
-        @include generalBtn($second-color);
+        @include generalBtn($second-color, $second-color);
         text-align: center;
       }
 
       button.apply {
-        @include generalBtn(#97B6D2);
+        @include generalBtn(#97B6D2, $btn-color);
         text-align: center
       }
 

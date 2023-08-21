@@ -20,10 +20,12 @@
   "updateRole": "Update Role",
   "roleList": "Role list",
   "userName": "Username",
-  "firstname": "Firstname",
-  "lastname": "Lastname",
-  "phone": "Phone",
+  "firstname": "First Name",
+  "nickname": "Nickname",
+  "lastName": "Last Name",
+  "phone": "Phone Number",
   "email": "Email",
+  "gender": "Gender",
   "address": "Address",
   "birthdate": "BirthDate",
   "createOn": "Created On",
@@ -142,6 +144,12 @@
   "remaining": "Remaining",
   "ourPartners": "Our Partners",
   "resetPassword": "Reset Password",
-  "edit": "Edit"
+  "edit": "Edit",
+  "currentPassword": "Current Password",
+  "newPassword": "New Password",
+  "confirmPassword": "Confirm Password",
+  "topScore3": "Best 3 Scores",
+  "start": "Start",
+  "knowMore": "Know More"
 
 }

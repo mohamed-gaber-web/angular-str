@@ -1,15 +1,23 @@
-@mixin generalBtn($bg-color) {
+@import './variables';
+
+@mixin generalBtn($bg-color, $hover-color) {
   all: unset;
   background-color: $bg-color;
   padding: 15px 30px;
   border-radius: 50px;
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   margin-top: 15px;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  border: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   &:hover {
-    background-color: $second-color;
+    background-color: transparent;
+    color: $hover-color;
+    outline: 5px solid $hover-color;
   }
 }

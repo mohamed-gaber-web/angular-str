@@ -67,7 +67,7 @@
       text-align: center;
       margin: 20px 0;
       button {
-        @include generalBtn($second-color);
+        @include generalBtn($second-color, $second-color);
         max-width: 100%;
         width: 30%;
       }
