@@ -123,7 +123,7 @@
             </p>
             <div class="about-us-btn">
               <button routerLink="/about-us">View More</button>
-              <button>Get an offer</button>
+              <button>For Organization</button>
             </div>
           </div>
         </div>
@@ -131,15 +131,31 @@
     </div>
   </div>
 
-  <div class="categories">
+  <div class="our-partners">
     <div class="container">
-      <h3 class="title">{{ "ourCategory" | translate }}</h3>
+      <h3 class="title">{{ "ourPartners" | translate }}</h3>
       <p>
         Key features are the ability to develop relationships with their
         students, patient, caring, and<br />
         kind personality, knowledge of learners. Engaging students in learning.
       </p>
-      <app-category></app-category>
+      <swiper [config]="config" class="main-swiper">
+        <ng-template swiperSlide>
+          <div class="swipper-slide">
+            <img src="../../../../assets/images/logo-1.png" />
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="swipper-slide">
+            <img src="../../../../assets/images/logo-2.png" />
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="swipper-slide">
+            <img src="../../../../assets/images/logo-3.png" />
+          </div>
+        </ng-template>
+      </swiper>
     </div>
   </div>
 

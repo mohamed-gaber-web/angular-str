@@ -45,7 +45,7 @@ h3.title {
     font-size: 50px;
 
     @media(max-width: 767px) {
-      font-size: 25px;
+      font-size: 25pxq;
     }
 }
 
@@ -139,4 +139,8 @@ h3.title-page {
   @media(max-width: 1024px) {
     padding: 20px;
   }
+}
+
+.modal-content {
+  border-radius: 50px;
 }

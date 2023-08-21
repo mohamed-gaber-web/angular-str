@@ -149,7 +149,7 @@
 }
 
 .about-us {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   .about-page-img {
     position: relative;
     width: 100%;
@@ -270,8 +270,9 @@
 }
 
 
-.categories {
-  margin: 50px 0;
+.our-partners {
+  margin: 0 0 50px 0;
+  text-align: center;
 
   p {
     color: #707070;
@@ -279,6 +280,13 @@
     font-size: 20px;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 50px;
+  }
+
+  img {
+    width: 300px;
+    height: 120px;
+    object-fit: contain;
   }
 
 }

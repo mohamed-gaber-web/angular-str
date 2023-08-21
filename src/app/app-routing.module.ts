@@ -37,6 +37,14 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule)
+  },
+  {
+    path: 'my-courses',
+    loadChildren: () => import('./pages/my-courses/my-courses.module').then(m => m.MyCoursesModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
   }
 ];
 

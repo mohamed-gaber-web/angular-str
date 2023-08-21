@@ -1,0 +1,75 @@
+<section class="profile-page">
+  <div class="container">
+    <div class="page-content">
+      <h3 class="title-page">{{ "profile" | translate }}</h3>
+      <div class="profile-img">
+        <img
+          src="../../../../assets/images/user-profile.jpg"
+          alt="profile-name"
+          class="profile-img_block"
+        />
+        <div class="img-edit">
+          <img
+            src="../../../../assets/images/profile-edit.gif"
+            alt="profile-name"
+          />
+        </div>
+      </div>
+
+      <div class="profile-info">
+        <ul>
+          <li>First Name : kdi NC</li>
+          <li>Last Name : idji kc</li>
+          <li>Nickname :</li>
+          <li>Phone Number :</li>
+          <li>Email : gifji kn.j@hbnisn</li>
+          <li>Gender : female</li>
+        </ul>
+      </div>
+
+      <div class="profile-btn">
+        <button>{{ "edit" | translate }}</button>
+        <button (click)="open(resetPassword)">
+          {{ "resetPassword" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Video -->
+
+<ng-template #resetPassword let-modal>
+  <div class="modal-body">
+    <div class="container">
+      <div class="form-img">
+        <img src="../../../../assets/images/reset-password.gif" />
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form class="profile-form">
+            <div class="form-group">
+              <label for="current"> Current Password *</label>
+              <input type="password" id="current" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="new"> New Password * </label>
+              <input type="password" id="new" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label> Confirm Password * </label>
+              <input type="password" class="form-control" />
+            </div>
+            <div class="form-btn">
+              <button>Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Modal Video -->

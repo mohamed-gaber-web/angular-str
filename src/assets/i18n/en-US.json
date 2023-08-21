@@ -138,5 +138,10 @@
   "reviews": "Reviews",
   "ourOnlineCourses": "Our Online Courses",
   "topScore": "Top Score",
-  "profile": "Profile"
+  "profile": "Profile",
+  "remaining": "Remaining",
+  "ourPartners": "Our Partners",
+  "resetPassword": "Reset Password",
+  "edit": "Edit"
+
 }

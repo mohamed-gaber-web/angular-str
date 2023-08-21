@@ -1,0 +1,117 @@
+@import '../../../theme/scss/variables';
+@import '../../../theme/scss/button';
+@import '../../../theme/scss/base';
+
+.profile-page {
+  margin: 100px 0;
+
+  .profile-img {
+    text-align: center;
+    position: relative;
+
+    img.profile-img_block {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    .img-edit {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 21%;
+          @media(max-width: 767px) {
+            left: 56%;
+          }
+        img {
+          width: 70px;
+          height: 70px;
+        }
+    }
+  }
+
+  .profile-info {
+    margin: 50px 0 0 0;
+    width: 50%;
+    @media(max-width: 1400px) {
+      width: 100% !important;
+    }
+    margin-inline: auto;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: $primary-color;
+        font-family: $font-muli;
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px 0;
+        border-bottom: 1px solid $primary-color;
+
+      }
+    }
+  }
+
+  .profile-btn {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    @media(max-width: 1400px) {
+      width: 100% !important;
+    }
+    button {
+      @include generalBtn($btn-color);
+      text-align: center;
+      max-width: 100%;
+      width: 20%;
+      @media(max-width: 767px) {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.form-img {
+  text-align: center;
+  img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+.profile-form {
+    padding: 50px;
+    label {
+    color: $primary-color;
+    font-family: $font-muli;
+    font-size: 22px;
+    font-weight: 700;
+    @media(max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  .form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    margin: 0 0 20px 0;
+    border-radius: 0;
+  }
+
+  .form-btn {
+    text-align: center;
+    margin: 20px 0;
+    button {
+      @include generalBtn($btn-color);
+      max-width: 100%;
+      width: 30%;
+    }
+  }
+}

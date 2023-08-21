@@ -21,12 +21,12 @@
             >
               {{ "home" | translate }}
             </li>
-            <li
+            <!-- <li
               routerLinkActive="active"
               [routerLinkActiveOptions]="{ exact: true }"
             >
               {{ "myCourses" | translate }}
-            </li>
+            </li> -->
             <li
               routerLink="/online-courses"
               routerLinkActive="active"
@@ -64,7 +64,7 @@
             <li (click)="closeMenuFN()" routerLink="">
               {{ "home" | translate }}
             </li>
-            <li (click)="closeMenuFN()">{{ "myCourses" | translate }}</li>
+            <!-- <li (click)="closeMenuFN()">{{ "myCourses" | translate }}</li> -->
             <li routerLink="/online-courses" (click)="closeMenuFN()">
               {{ "onlineCourses" | translate }}
             </li>
@@ -100,8 +100,12 @@
           />
           <div class="drop-down-menu" *ngIf="menuToggleProfle">
             <ul>
-              <li (click)="closeMenuFN()">{{ "myCourses" | translate }}</li>
-              <li (click)="closeMenuFN()">{{ "profile" | translate }}</li>
+              <li routerLink="/my-courses" (click)="closeMenuFN()">
+                {{ "myCourses" | translate }}
+              </li>
+              <li routerLink="/profile" (click)="closeMenuFN()">
+                {{ "profile" | translate }}
+              </li>
               <li routerLink="/top-score" (click)="closeMenuFN()">
                 {{ "topScore" | translate }}
               </li>
