@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'top-score',
     loadChildren: () => import('./pages/top-score/top-score.module').then(m => m.TopScoreModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule)
   }
 ];
 

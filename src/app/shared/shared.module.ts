@@ -20,13 +20,15 @@ import { HttpLoaderFactory } from '../app.module';
 import { CategoryComponent } from './component/category/category.component';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReviewsCardComponent } from './component/reviews-card/reviews.component';
+import { CourseCardComponent } from './component/course-card/course-card.component';
 
 
 
 @NgModule({
   declarations: [
     CategoryComponent,
-    ReviewsCardComponent
+    ReviewsCardComponent,
+    CourseCardComponent
   ],
   imports: [
     CommonModule,
@@ -61,7 +63,8 @@ import { ReviewsCardComponent } from './component/reviews-card/reviews.component
     CategoryComponent,
     RouterModule,
     NgbRatingModule,
-    ReviewsCardComponent
+    ReviewsCardComponent,
+    CourseCardComponent
   ],
   providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: IntersectionObserverHooks }], // <-- Declare that you want to use ScrollHooks
 })
