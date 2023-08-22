@@ -64,6 +64,7 @@ header {
             right: -70px;
             box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
             z-index: 20000;
+            cursor: pointer;
             ul {
               list-style: none;
               padding: 0;
@@ -129,6 +130,7 @@ header {
         right: 0;
         box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
         z-index: 200000;
+        cursor: pointer;
 
         .lang {
           display: flex;
@@ -176,6 +178,7 @@ header {
       line-height: 60px;
       color: $second-color;
       font-weight: 700;
+      cursor: pointer;
 
     }
   }

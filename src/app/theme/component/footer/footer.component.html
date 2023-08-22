@@ -3,7 +3,7 @@
     <hr />
     <div class="row">
       <div class="col-md-3 col-xs-6">
-        <div class="contact-us">
+        <div class="contact-us" *ngIf="contactUsInfo$ | async as contactUsInfo">
           <img
             src="../../../../assets/images/Group 46.png"
             alt="logo-khrs"
@@ -11,11 +11,16 @@
             class="footer-logo mb-3"
           />
           <ul>
-            <li><i class="bi bi-envelope-fill"></i>academy@khrs.dk</li>
-            <li><i class="bi bi-telephone-fill"></i> + 45 35 36 22 09</li>
             <li>
-              <i class="bi bi-geo-alt-fill"></i>Vibevej 20, 3tv <br />2400
-              København NV
+              <i class="bi bi-envelope-fill"></i>{{ contactUsInfo.email }}
+            </li>
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              {{ contactUsInfo.phoneNumber }}
+            </li>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              {{ contactUsInfo.address }}
             </li>
           </ul>
         </div>

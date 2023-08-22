@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './component/home.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -16,7 +15,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    SlickCarouselModule
   ]
 })
 export class HomeModule { }

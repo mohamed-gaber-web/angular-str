@@ -150,6 +150,16 @@
   "confirmPassword": "Confirm Password",
   "topScore3": "Best 3 Scores",
   "start": "Start",
-  "knowMore": "Know More"
+  "knowMore": "Know More",
+  "name": "Name",
+  "nameReq": "Name field is required!",
+  "emailReq": "Email field is required!",
+  "nameLength": "name length must be 2 charachters at least.",
+  "emailValid": "Please enter a valid email",
+  "phoneReq": "Phone field is required!",
+  "phonePattern": "Phone pattern must be like 01********* & numbers only",
+  "message": "Message",
+  "messageReq": "Message field is required!",
+  "messageContain": " Message must contain 10 characters at least"
 
 }

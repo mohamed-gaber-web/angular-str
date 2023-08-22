@@ -3,59 +3,143 @@
     <div class="page-content">
       <h3 class="title-page">{{ "ContactUs" | translate }}</h3>
       <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <div class="contact-us_info">
+        <div class="col-md-12 col-lg-6 col-xl-6 col-sm-12">
+          <div
+            class="contact-us_info"
+            *ngIf="contactUsInfo$ | async as contactUsInfo"
+          >
             <ul>
-              <li><i class="bi bi-envelope-fill"></i>academy@khrs.dk</li>
-              <li><i class="bi bi-telephone-fill"></i>+ 45 35 36 22 09</li>
               <li>
-                <i class="bi bi-geo-alt-fill"></i>Vibevej 20, 3tv 2400 København
-                NV
+                <i class="bi bi-envelope-fill"></i>{{ contactUsInfo.email }}
+              </li>
+              <li>
+                <i class="bi bi-telephone-fill"></i
+                >{{ contactUsInfo.phoneNumber }}
+              </li>
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+                {{ contactUsInfo.address }}
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <div class="contact-us_form">
-            <form [formGroup]="contactUsForm" (ngSubmit)="sendContactUs()">
+            <form [formGroup]="contactUsForm">
               <div class="form-group">
-                <label> Name: </label>
+                <label> {{ "name" | translate }}: </label>
                 <input
                   type="text"
                   class="form-control"
                   formControlName="name"
                 />
+                <div
+                  class="invalid"
+                  *ngIf="
+                    contactUsForm.get('name')?.invalid &&
+                    (contactUsForm.get('name')?.touched ||
+                      contactUsForm.get('name')?.dirty)
+                  "
+                >
+                  <div *ngIf="control['name'].errors?.['required']">
+                    {{ "nameReq" | translate }}
+                  </div>
+                  <div *ngIf="control['name'].invalid">
+                    {{ "nameLength" | translate }}
+                  </div>
+                </div>
               </div>
 
               <div class="form-group">
-                <label> Phone: </label>
+                <label> {{ "phone" | translate }}: </label>
                 <input
                   type="text"
                   class="form-control"
                   formControlName="phoneNumber"
                 />
+                <div
+                  class="invalid"
+                  *ngIf="
+                    contactUsForm.get('phoneNumber')?.hasError('required') &&
+                    (contactUsForm.get('phoneNumber')?.touched ||
+                      contactUsForm.get('phoneNumber')?.dirty)
+                  "
+                >
+                  {{ "phoneReq" | translate }}
+                </div>
+
+                <div
+                  class="invalid"
+                  *ngIf="
+                    contactUsForm.get('phoneNumber')?.invalid &&
+                    (contactUsForm.get('phoneNumber')?.touched ||
+                      contactUsForm.get('phoneNumber')?.dirty)
+                  "
+                >
+                  {{ "phonePattern" | translate }}
+                </div>
               </div>
 
               <div class="form-group">
-                <label> Email: </label>
+                <label> {{ "email" | translate }}: </label>
                 <input
                   type="email"
                   class="form-control"
                   formControlName="email"
                 />
+                <div
+                  class="invalid"
+                  *ngIf="
+                    contactUsForm.get('email')?.invalid &&
+                    (contactUsForm.get('email')?.touched ||
+                      contactUsForm.get('email')?.dirty)
+                  "
+                >
+                  <div *ngIf="control['email'].errors?.['required']">
+                    {{ "emailReq" | translate }}
+                  </div>
+                  <div *ngIf="control['email'].invalid">
+                    {{ "emailValid" | translate }}
+                  </div>
+                </div>
               </div>
 
               <div class="form-group">
-                <label> Message: </label>
+                <label> {{ "message" | translate }}: </label>
                 <textarea
                   class="form-control text-area"
                   formControlName="message"
                 ></textarea>
+                <div
+                  class="invalid"
+                  *ngIf="
+                    contactUsForm.get('message')?.hasError('required') &&
+                    (contactUsForm.get('message')?.touched ||
+                      contactUsForm.get('message')?.dirty)
+                  "
+                >
+                  {{ "messageReq" | translate }}
+                </div>
+                <div
+                  class="invalid"
+                  *ngIf="
+                    control['message'].invalid &&
+                    (contactUsForm.get('message')?.touched ||
+                      contactUsForm.get('message')?.dirty)
+                  "
+                >
+                  {{ "messageContain" | translate }}
+                </div>
               </div>
 
               <div class="form-btn">
-                <button>{{ "send" | translate }}</button>
+                <button
+                  (click)="sendContactUs()"
+                  [disabled]="contactUsForm.invalid"
+                >
+                  {{ "send" | translate }}
+                </button>
               </div>
             </form>
           </div>
