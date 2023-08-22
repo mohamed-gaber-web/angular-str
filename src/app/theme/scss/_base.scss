@@ -8,3 +8,42 @@
   position: relative;
   top: 7px;
 }
+
+@mixin generalBg() {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 50px;
+  border: 15px solid #fff;
+  margin: 20px 0;
+
+  @media(max-width: 767px) {
+    padding: 50px 30px;
+  }
+}
+@mixin circleBg() {
+  background: radial-gradient(circle, rgba(132,161,188,1) 0%, rgba(57,78,102,1) 100%);
+  border-radius: 50%;
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  bottom: -294px;
+  left: -60px;;
+  z-index: -1;
+  @media(max-width: 1200px) {
+    display: none;
+  }
+
+  @media(min-width: 1201px) and (max-width: 1500px) {
+    width: 900px;
+    height: 900px;
+    bottom: -112px;
+    left: -210px;
+  }
+
+  @media(min-width: 1500px) and (max-width: 1650px) {
+    width: 900px;
+    height: 900px;
+    bottom: -193px;
+    left: -131px;
+  }
+}

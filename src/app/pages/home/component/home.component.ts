@@ -1,3 +1,4 @@
+import { Observable, map, tap } from 'rxjs';
 import { Component, ViewChild } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +10,7 @@ import SwiperCore, {
   Autoplay,
 } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
+import { ActivatedRoute } from '@angular/router';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 @Component({
   selector: 'app-home',
@@ -18,6 +20,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 export class HomeComponent {
 
   @ViewChild(SwiperComponent) swiper!: SwiperComponent;
+  homeData$: Observable<any> | undefined;
 
   config: SwiperOptions = {
     slidesPerView: 4,
@@ -44,9 +47,15 @@ export class HomeComponent {
 }
   };
 
-  constructor(private viewportScroller: ViewportScroller, private modalService: NgbModal) {}
+  constructor(
+    private viewportScroller: ViewportScroller,
+    private modalService: NgbModal,
+    private route: ActivatedRoute
+    ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.homeData$ = this.route.data.pipe(tap((res: any) => console.log(res)))
+  }
 
   onClick(elementId: any): void {
     this.viewportScroller.scrollToAnchor(elementId);

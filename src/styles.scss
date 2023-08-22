@@ -142,5 +142,16 @@ h3.title-page {
 }
 
 .modal-content {
-  border-radius: 50px;
+  border-radius: 16px;
 }
+
+
+.modal-video {
+  .modal-content {
+    border-radius: 16px !important;
+  }
+
+}
+
+
+

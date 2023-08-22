@@ -50,6 +50,7 @@
       font-family: $font-muli;
       font-size: 22px;
       font-weight: 700;
+      margin: 10px 0;
       @media(max-width: 767px) {
         font-size: 16px;
       }
@@ -59,8 +60,10 @@
       background-color: transparent;
       border: none;
       border-bottom: 2px solid $second-color;
-      margin: 10px 0;
       border-radius: 0;
+      height: 30px;
+      font-size: 18px;
+      font-weight: 600;
     }
 
     .form-btn {
@@ -73,4 +76,9 @@
       }
     }
   }
+}
+
+
+.text-area {
+  height: 150px !important;
 }

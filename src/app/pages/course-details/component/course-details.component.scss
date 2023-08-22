@@ -1,0 +1,94 @@
+@import '../../../theme/scss/variables';
+@import '../../../theme/scss/button';
+@import '../../../theme/scss/_base';
+
+.course-details {
+  overflow: hidden;
+  position: relative;
+  padding: 50px 0;
+
+  .test-bg {
+    @include circleBg();
+  }
+
+  .course-bg {
+    @include generalBg();
+    .course-header {
+      text-align: center;
+      margin: 10px 0 50px 0;
+
+      h3 {
+        color: $second-color;
+        font-family: $font-muli;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+
+  .course-details_img {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @media(max-width: 1200px) {
+      margin-top: 50px;
+    }
+  }
+
+  .content-bg {
+    h5 {
+    color: #FFF;
+    font-family: $font-muli;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    @media(max-width: 1200px) {
+      color: $primary-color;
+    }
+    }
+
+    p {
+    color: #FFF;
+    font-family: $font-muli;
+    font-size: 18px;
+    font-weight: 700;
+    width: 70%;
+    @media(max-width: 1200px) {
+      width: 100%;
+      color: $primary-color;
+    }
+    }
+
+    button {
+      @include generalBtn($btn-color, $btn-color);
+      padding: 16px 70px;
+    }
+  }
+
+}
+
+
+.video {
+  background-color: $primary-color;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 30px auto 0 auto;
+  animation: scaleItem 0.5s alternate infinite ease-in;
+
+
+  i {
+    font-size: 30px;
+    color: #fff;
+  }
+}
+
+// Animation
+@keyframes scaleItem {
+  from   {transform: scale(.8);}
+  to {transform: scale(1.5);}
+}

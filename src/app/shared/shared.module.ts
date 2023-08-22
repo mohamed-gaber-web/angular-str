@@ -46,6 +46,7 @@ import { MyCourseCardComponent } from './component/my-course-card/my-course-card
     ToastrModule.forRoot(),
     NgbPaginationModule,
     NgbRatingModule,
+    NgbAccordionModule,
     TranslateModule.forChild({//or forRoot, no idea how to configure this
       loader: {
         provide: TranslateLoader,
@@ -67,7 +68,9 @@ import { MyCourseCardComponent } from './component/my-course-card/my-course-card
     NgbRatingModule,
     ReviewsCardComponent,
     CourseCardComponent,
-    MyCourseCardComponent
+    MyCourseCardComponent,
+    NgbAccordionModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: IntersectionObserverHooks }], // <-- Declare that you want to use ScrollHooks
 })
