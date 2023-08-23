@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CourseDetailsComponent } from './component/course-details.component';
+import { CourseDetailsResolver } from './resolver/course-details.resolve';
 
 const routes: Routes = [
   {
     path: '',
-    component: CourseDetailsComponent
+    component: CourseDetailsComponent,
+    resolve: {
+      data: CourseDetailsResolver
+    }
   }
 ];
 

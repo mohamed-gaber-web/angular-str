@@ -74,20 +74,22 @@ export class HomeComponent {
   // Get All Courses
   getAllCourses() {
     let params = `?Page=${this.pageNumber}&Size=${Size}`;
-    this.dataService.getList(`${getAllCourses}` + params).subscribe((res: any) => {
-      this.coursesList = res.list;
-    })
-  }
-
-  onScroll(){
-    let params = `?Page=${this.pageNumber}&Size=${Size}`;
     this.subs.push(
-      this.dataService.getList(`${getAllCourses}` + params)
-      .subscribe(res => {
-        this.coursesList = [...this.coursesList, ...res.list];
+      this.dataService.getList(`${getAllCourses}` + params).subscribe((res: any) => {
+        this.coursesList = res.list;
       })
     );
   }
+
+  // onScroll(){
+  //   let params = `?Page=${this.pageNumber}&Size=${Size}`;
+  //   this.subs.push(
+  //     this.dataService.getList(`${getAllCourses}` + params)
+  //     .subscribe(res => {
+  //       this.coursesList = [...this.coursesList, ...res.list];
+  //     })
+  //   );
+  // }
 
   // Modal
   open(content: any) {

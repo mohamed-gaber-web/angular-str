@@ -8,7 +8,10 @@
     <p [innerHTML]="courseItem.shortDescription.slice(0, 100)"></p>
   </div>
   <div class="course-btn">
-    <button class="more" routerLink="/course/course-details">
+    <button
+      class="more"
+      [routerLink]="['/course/course-details', courseItem.id]"
+    >
       {{ "knowMore" | translate }}
     </button>
     <button class="apply">{{ "start" | translate }}</button>

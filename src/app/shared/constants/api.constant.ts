@@ -8,4 +8,5 @@ export const getContactUsInfo = `${apiUrl}ContactUsInfo/GetContactUsInfoFront`;
 export const getAboutUsInfo = `${apiUrl}AboutUs/GetAboutUsFront`;
 export const getSocialMedia = `${apiUrl}SocialMedia/GetSocialMediaLookUpFront`;
 export const getAllCourses = `${apiUrl}Course/GetAllCoursesBySearch`;
+export const getCourseDetails = `${apiUrl}Course/GetCourseDetailsFront`;
 
