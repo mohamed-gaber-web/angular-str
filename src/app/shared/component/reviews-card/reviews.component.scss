@@ -14,6 +14,7 @@
     @media(max-width: 1024px) {
       flex-wrap: wrap;
       justify-content: center;
+      padding: 50px 30px;
     }
 
     .slide-img {
@@ -105,6 +106,10 @@
             position: absolute;
             right: 0;
             bottom: -40px;
+            @media(max-width: 767px) {
+              width: 26%;
+              bottom: -56px;
+            }
           }
       }
     }

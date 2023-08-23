@@ -23,6 +23,9 @@ import { ReviewsCardComponent } from './component/reviews-card/reviews.component
 import { CourseCardComponent } from './component/course-card/course-card.component';
 import { MyCourseCardComponent } from './component/my-course-card/my-course-card.component';
 
+// import { InfiniteScrollModule } from "ngx-infinite-scroll";
+
+
 @NgModule({
   declarations: [
     CategoryComponent,
@@ -44,6 +47,7 @@ import { MyCourseCardComponent } from './component/my-course-card/my-course-card
     ToastrModule.forRoot(),
     NgbPaginationModule,
     NgbRatingModule,
+    // InfiniteScrollModule,
     NgbAccordionModule,
 
     TranslateModule.forChild({//or forRoot, no idea how to configure this
@@ -70,6 +74,7 @@ import { MyCourseCardComponent } from './component/my-course-card/my-course-card
     MyCourseCardComponent,
     NgbAccordionModule,
     ReactiveFormsModule,
+    // InfiniteScrollModule
   ],
   providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: IntersectionObserverHooks }], // <-- Declare that you want to use ScrollHooks
 })

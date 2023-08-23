@@ -18,9 +18,9 @@
               <i class="bi bi-telephone-fill"></i>
               {{ contactUsInfo.phoneNumber }}
             </li>
-            <li>
+            <li class="footer-contact-info">
               <i class="bi bi-geo-alt-fill"></i>
-              {{ contactUsInfo.address }}
+              <div [innerHTML]="contactUsInfo.address"></div>
             </li>
           </ul>
         </div>

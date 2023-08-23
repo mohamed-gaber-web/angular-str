@@ -1,4 +1,4 @@
-<div class="home-page">
+<div class="home-page" *ngIf="homeData$ | async as homeData">
   <div class="hero-img">
     <div class="container">
       <div class="header-text">
@@ -116,11 +116,7 @@
               Learn a new skills,<br />
               Advance your career
             </h3>
-            <p>
-              Key features are the ability to develop relationships with their
-              students, patient, caring, and kind personality, knowledge of
-              learners. Engaging students in learning.
-            </p>
+            <p [innerHTML]="homeData.homeFrontAboutUsVm.shortDescription"></p>
             <div class="about-us-btn">
               <button routerLink="/about-us">View More</button>
               <button>For Organization</button>
@@ -165,9 +161,9 @@
       <div class="row">
         <div
           class="col-md-6 col-lg-6 col-xl-3 col-sm-12"
-          *ngFor="let item of [1, 2, 3, 4, 5, 6]"
+          *ngFor="let course of coursesList"
         >
-          <app-course-card></app-course-card>
+          <app-course-card [courseData]="course"></app-course-card>
         </div>
       </div>
     </div>
@@ -182,16 +178,12 @@
   <div class="modal-video">
     <ng-template #content let-modal>
       <div class="modal-body">
-        <!-- <video controls>
-      <source
-        src="https://www.youtube.com/watch?v=eIi_BHEMyNM"
-        type="video/mp4"
-      />
-    </video> -->
-        <iframe
-          src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
-        >
-        </iframe>
+        <video controls>
+          <source
+            [src]="homeData.homeFrontApplicationIntroVm.introVideoUrl"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </ng-template>
   </div>

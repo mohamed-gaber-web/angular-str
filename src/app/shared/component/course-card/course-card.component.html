@@ -1,12 +1,11 @@
-<div class="course">
-  <img src="../../../../assets/images/placeholder.jpg" alt="" />
+<div class="course" *ngIf="courseItem">
+  <img [src]="courseItem.imagePath" alt="" />
   <div class="course-info">
-    <h4>Arbejdsmarked og digitalisering</h4>
-    <h5>Duration: <b> 30 day </b></h5>
-    <p>
-      Du introduceres for det danske arbejdsmarked og lærer at navigere i
-      relevante digitale
-    </p>
+    <h4>{{ courseItem.title }}</h4>
+    <h5>
+      Duration: <b> {{ courseItem.duration }} day </b>
+    </h5>
+    <p [innerHTML]="courseItem.shortDescription.slice(0, 100)"></p>
   </div>
   <div class="course-btn">
     <button class="more" routerLink="/course/course-details">

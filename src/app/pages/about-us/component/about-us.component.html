@@ -1,4 +1,4 @@
-<section class="about-us">
+<section class="about-us" *ngIf="aboutUsInfo$ | async as aboutUsInfo">
   <div class="container">
     <div class="about-us_top">
       <h3 class="title-page">{{ "aboutUs" | translate }}</h3>
@@ -10,14 +10,7 @@
               Why You Choose Our<br />
               E-asy Online learning
             </h3>
-            <p>
-              Dramatically supply transparent deliverables before & you backward
-              comp internal or "organic" sources. <br />
-              <br />
-              Key features are the ability to develop relationships with their
-              students, patient, caring, and kind personality, knowledge of
-              learners. Engaging students in learning.
-            </p>
+            <p [innerHTML]="aboutUsInfo.content"></p>
             <ul>
               <li>Increasing Your Learning Skills</li>
               <li>High Quality Video & Audio Classes</li>
@@ -117,7 +110,10 @@
       <h3 class="title-page">{{ "introVideo" | translate }}</h3>
       <div class="about-video">
         <video controls>
-          <source src="movie.mp4" type="video/mp4" />
+          <source
+            [src]="aboutUsInfo.applicationIntroMediaUrl"
+            type="video/mp4"
+          />
         </video>
       </div>
     </div>
